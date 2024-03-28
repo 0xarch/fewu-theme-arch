@@ -1,7 +1,7 @@
 {
     "name": "Arch Advyzon",
     "author": "Hogger team",
-    "description": "Icarus style theme for Nexo",
+    "description": "Icarus style theme for Fewu",
     "lib": [
         "@:highlightjs:&&:unpkg"
     ],

@@ -37,20 +37,20 @@ html
                 .card.update
                     .heading= i18n('Build')
                     .inner.column
-                        .plain= i18n('Build time')+' '+nexo.deploy_time
+                        .plain= i18n('Build time')+' '+fewu.deploy_time
                         .plain= i18n('Node.js version')+' '+NODE_CORE_VERSION
                         .plain= i18n('V8 version')+' '+NODE_V8_VERSION
                         .plain= i18n('Node.js C++ modules version')+' '+NODE_CPP_VERSION
-                        .plain= i18n('Nexo version')+' '+NEXO_VERSION 
-                        .plain= i18n('Nexo code')+' '+NEXO_CODE
+                        .plain= i18n('Fewu version')+' '+FEWU_VERSION 
+                        .plain= i18n('Fewu code')+' '+FEWU_CODE
                         .plain= 'LANG '+LANG
                 .card.theme
                     .heading| Theme
                     .inner.column
-                        .plain| Nexo with Arch Theme v0.3
+                        .plain| Fewu with Arch Theme v0.3
                         .flex.alc.fgap
                             .logo-of-theme
-                            != nexo.logo()
+                            != fewu.logo()
                 .card.plugin
                     .heading| Node.js
                     .inner.column
