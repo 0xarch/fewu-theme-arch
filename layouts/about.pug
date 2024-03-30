@@ -12,7 +12,7 @@ html(lang="zh")
         #main(class=theme['3rd-bar']&&'multi')
             main.content
                 .Card
-                    #markdown_fillContent.container!= post.getParsed('content')
+                    #markdown_fillContent.container!= post.parsed.content
             +sidebar2('About')
         include /includes/footer.pug
         include /components/searchPanel.pug

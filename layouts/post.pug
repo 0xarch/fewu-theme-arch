@@ -15,12 +15,12 @@ html(lang="zh")
                 unless post.old == true
                     .card.foreword
                         .heading= i18n('Foreword')
-                        .container!= post.getParsed('foreword')
+                        .container!= post.parsed.foreword
                 .card.p8
                     article#markdown_fillContent
                         if post.old == true
-                            != post.getParsed('foreword')
-                        != post.getParsed('content')
+                            != post.parsed.foreword
+                        != post.parsed.content
                 if post.license.is_cc_license()
                     .card.cc
                         a.Heading(href='https://creativecommons.org/')
