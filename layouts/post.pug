@@ -21,7 +21,7 @@ html(lang="zh")
                         if post.old == true
                             != post.parsed.foreword
                         != post.parsed.content
-                if post.license.is_cc_license()
+                if post.license.isCreativeCommons()
                     .card.cc
                         a.Heading(href='https://creativecommons.org/')
                             = i18n('Distribution License Agreement') + ' '
@@ -50,11 +50,11 @@ html(lang="zh")
                     - let latest = post.prevID?false:true
                     - let __prev = ID[post.prevID]
                     - let __next = ID[post.nextID]
-                    a.Button(href=!latest&&file(__prev.path('website')),class=latest?'disabled':'')
+                    a.Button(href=!latest&&file(__prev.path.website),class=latest?'disabled':'')
                         .arrow='<<'
                         .nowrap= latest?i18n('Already latest'):__prev.title
                     .spacer
-                    a.Button(href=!earliest&&file(__next.path('website')),class=earliest?'disabled':'')
+                    a.Button(href=!earliest&&file(__next.path.website),class=earliest?'disabled':'')
                         .nowrap= earliest?i18n('Already earliest'):__next.title
                         .arrow='>>'
 
